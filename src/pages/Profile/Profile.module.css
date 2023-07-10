@@ -1,0 +1,144 @@
+.roomHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  /* padding: 40px 0; */
+  /* margin-bottom: 20px; */
+  /* padding-top: 20px; */
+  /* border: 2px solid red; */
+  top: 5rem;
+  background-image: linear-gradient(
+    to top,
+    rgba(18, 18, 18, 0),
+    rgba(18, 18, 18, 1) 30%
+  );
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+}
+.heading::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 120%;
+  height: 4px;
+  background-color: #0077ff;
+  border-radius: 20px;
+}
+
+.details {
+  min-height: 40vh;
+  background: #171717;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.userbox {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #0077ff;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex: 1;
+}
+
+.userbox span {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.description {
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.description textarea {
+  resize: none;
+  padding: 10px;
+  background-color: #323232;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  color: #fff;
+  min-height: 100px;
+  width: 500px;
+}
+
+.userbox button {
+  color: white;
+  margin-left: 10px;
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.right {
+  display: flex;
+  padding: 50px;
+}
+
+.content {
+  background: #121212;
+  width: 150px;
+  height: 100px;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 -20px;
+  padding: 20px 0;
+}
+
+.content h2 {
+  font-weight: bold;
+}
+
+.followButton {
+  background-color: #0077ff;
+}
+
+.unfollowButton {
+  background-color: #323232;
+}
+
+.changeDescriptionButton {
+  background-color: #323232;
+}
+
+.saveDescriptionButton {
+  background-color: #0077ff;
+}

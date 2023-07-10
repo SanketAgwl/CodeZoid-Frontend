@@ -1,0 +1,43 @@
+.cardWrapper {
+  composes: cardWrapper from "../../../App.module.css";
+}
+
+.topPara {
+  color: #c4c5c5;
+  font-size: 15px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.avatarWrapper {
+  width: 110px;
+  height: 110px;
+  test-align: center;
+  border: 6px solid #0077ff;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarInput {
+  display: none;
+}
+
+.avatarLabel {
+  color: #0077ff;
+  margin: 20px 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .inputWrap {
+  margin: 40px auto;
+} */

@@ -1,0 +1,18 @@
+.cardWrapper {
+  composes: cardWrapper from "../../../App.module.css";
+}
+
+.bottomPara {
+  color: #c4c5c5;
+  width: 50%;
+  margin: 0 auto;
+}
+.actionButtonWrap {
+  composes: actionButtonWrap from "../StepPhoneEmail/StepPhoneEmail.module.css";
+  margin-bottom: 0px;
+}
+
+.inputWrap {
+  /* margin: 40px auto; */
+  margin-bottom: 25px;
+}

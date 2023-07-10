@@ -1,0 +1,121 @@
+.chatBox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 63vh;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  justify-content: flex-end;
+}
+
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow-y: auto;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.message {
+  background-color: #f2f2f2;
+  padding: 10px;
+  color: black;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+}
+
+.messageTime {
+  font-size: 12px;
+  color: #000;
+  margin-top: 5px;
+}
+
+.myMessage {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.senderInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.imgCover {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.senderName {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #1d1d1d;
+  border-radius: 20px;
+}
+
+.input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  color: #fff;
+  background-color: transparent;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.sendButton {
+  margin-left: 10px;
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: #0056b3;
+}
+
+.serviceHead::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background-color: #0077ff;
+  border-radius: 20px;
+}
+
+.serviceHead {
+  font-size: 25px;
+  position: relative;
+  margin: 30px;
+  font-weight: bold;
+}

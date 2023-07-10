@@ -1,0 +1,111 @@
+.modalMask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.modalBody {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+  background: #1d1d1d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.modalHeader {
+  padding: 30px;
+  border-bottom: 2px solid #262626;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.heading {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.subHeading {
+  font-size: 18px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.roomTypes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.typeBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.typeBox:hover {
+  background: #202020;
+}
+
+.typeBox.active {
+  background: #262626;
+}
+
+.modalFooter {
+  padding: 30px;
+  border-bottom: 2px solid #262626;
+  text-align: center;
+  /* width: 100%; */
+}
+
+.modalFooter h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footerButton {
+  background: #20bd5f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  width: 180px;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 20px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.footerButton:hover {
+  background: #13763b;
+}
+
+.footerButton span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 3px;
+  background: none;
+}
