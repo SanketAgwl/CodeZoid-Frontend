@@ -21,9 +21,23 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
 
       let provider = null;
       try {
-        const signalingUrl = `ws://${window.location.hostname}:4444`;
+        const signalingUrl = [
+          // `wss://${"signalling-ym5d.onrender.com"}`,
+          `ws://${process.env.REACT_APP_SIGNALLING_URL}`,
+          // "wss://y-webrtc-ckynwnzncc.now.sh",
+          // "wss://signaling.yjs.dev",
+          // "wss://y-webrtc-signaling-eu.herokuapp.com",
+          // "wss://y-webrtc-signaling-us.herokuapp.com",
+        ];
         provider = new WebrtcProvider(roomId, ydoc, {
-          signaling: [signalingUrl],
+          signaling: [
+            // `wss://${"signalling-ym5d.onrender.com"}`,
+            `ws://${window.location.hostname}:4444`,
+            // "wss://y-webrtc-ckynwnzncc.now.sh",
+            // "wss://signaling.yjs.dev",
+            // "wss://y-webrtc-signaling-eu.herokuapp.com",
+            // "wss://y-webrtc-signaling-us.herokuapp.com",
+          ],
         });
 
         const yText = ydoc.getText("codemirror");
