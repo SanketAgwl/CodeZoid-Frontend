@@ -24,7 +24,7 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
       try {
         const signalingUrl = [
           // `wss://${"signalling-ym5d.onrender.com"}`,
-          `ws://${process.env.REACT_APP_SIGNALLING_URL}`,
+          `wss://${process.env.REACT_APP_SIGNALLING_URL}`,
           // "wss://y-webrtc-ckynwnzncc.now.sh",
           // "wss://signaling.yjs.dev",
           // "wss://y-webrtc-signaling-eu.herokuapp.com",
