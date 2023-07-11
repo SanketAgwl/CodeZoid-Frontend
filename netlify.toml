@@ -1,12 +1,3 @@
-[build]
-  base = "/"
-  command = "CI=false npm run build"
-  publish = "/dist/"
-  [build.environment]
-    NODE_VERSION = "20"
-[functions]
-  external_node_modules = ["express", "mongodb"]
-  node_bundler = "esbuild"
 [[redirects]]
   force = true
   from = "/api/*"
