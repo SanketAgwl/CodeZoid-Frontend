@@ -10,6 +10,18 @@ const api = axios.create({
   },
 });
 
+// Add an interceptor to modify the response headers
+api.interceptors.response.use(
+  (response) => {
+    // Modify the response headers to include the Access-Control-Allow-Origin header
+    response.headers["Access-Control-Allow-Origin"] = "*";
+    return response;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 //list of all the endpoints
 
 export const sendOtp = (data) => api.post("/api/send-otp", data);
