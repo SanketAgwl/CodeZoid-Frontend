@@ -24,7 +24,6 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
       try {
         const signalingUrl = [
           // `wss://${"signalling-ym5d.onrender.com"}`,
-          `wss://${process.env.REACT_APP_SIGNALLING_URL}`,
           // "wss://y-webrtc-ckynwnzncc.now.sh",
           // "wss://signaling.yjs.dev",
           // "wss://y-webrtc-signaling-eu.herokuapp.com",
@@ -33,7 +32,8 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
         provider = new WebrtcProvider(roomId, ydoc, {
           signaling: [
             // `wss://${"signalling-ym5d.onrender.com"}`,
-            `ws://${window.location.hostname}:4444`,
+            // `ws://${window.location.hostname}:4444`,
+            `wss://${process.env.REACT_APP_SIGNALLING_URL}`,
             // "wss://y-webrtc-ckynwnzncc.now.sh",
             // "wss://signaling.yjs.dev",
             // "wss://y-webrtc-signaling-eu.herokuapp.com",
