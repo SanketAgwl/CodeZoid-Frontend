@@ -42,31 +42,33 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
           peerOpts: {
             // specify the peer options here
             // Example:
-            iceServers: [
-              {
-                urls: "stun:stun.relay.metered.ca:80",
-              },
-              {
-                urls: "turn:a.relay.metered.ca:80",
-                username: "2bc2d9750f7946f545753ccd",
-                credential: "naeXsKmLVO9jcmlX",
-              },
-              {
-                urls: "turn:a.relay.metered.ca:80?transport=tcp",
-                username: "2bc2d9750f7946f545753ccd",
-                credential: "naeXsKmLVO9jcmlX",
-              },
-              {
-                urls: "turn:a.relay.metered.ca:443",
-                username: "2bc2d9750f7946f545753ccd",
-                credential: "naeXsKmLVO9jcmlX",
-              },
-              {
-                urls: "turn:a.relay.metered.ca:443?transport=tcp",
-                username: "2bc2d9750f7946f545753ccd",
-                credential: "naeXsKmLVO9jcmlX",
-              },
-            ],
+            config: {
+              iceServers: [
+                {
+                  urls: "stun:stun.relay.metered.ca:80",
+                },
+                {
+                  urls: "turn:a.relay.metered.ca:80",
+                  username: "2bc2d9750f7946f545753ccd",
+                  credential: "naeXsKmLVO9jcmlX",
+                },
+                {
+                  urls: "turn:a.relay.metered.ca:80?transport=tcp",
+                  username: "2bc2d9750f7946f545753ccd",
+                  credential: "naeXsKmLVO9jcmlX",
+                },
+                {
+                  urls: "turn:a.relay.metered.ca:443",
+                  username: "2bc2d9750f7946f545753ccd",
+                  credential: "naeXsKmLVO9jcmlX",
+                },
+                {
+                  urls: "turn:a.relay.metered.ca:443?transport=tcp",
+                  username: "2bc2d9750f7946f545753ccd",
+                  credential: "naeXsKmLVO9jcmlX",
+                },
+              ],
+            },
           },
         });
 
