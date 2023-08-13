@@ -40,7 +40,9 @@ const Room = () => {
     messages,
     sendMessage,
   } = useWebRTC(roomId, user);
-  const [code, setCode] = useState("");
+  const [code, setCode] = useState(
+    "#Your python code here. Happy Collaborating!"
+  );
 
   console.log(user);
 
