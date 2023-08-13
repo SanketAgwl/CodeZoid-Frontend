@@ -155,6 +155,7 @@ const Room = () => {
               roomId={roomId}
               runPython={runPython}
               setCode={setCode}
+              code={code}
             />
           </div>
           {serviceState !== "" && (
