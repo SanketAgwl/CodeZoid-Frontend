@@ -9,6 +9,7 @@ import "codemirror/theme/material.css";
 import "./EditorAddons";
 
 const Editor = ({ roomId, user, runPython, code, setCode }) => {
+  console.log("Given code", code);
   console.log(process.env.REACT_APP_SIGNALLING_URL);
   const [EditorRef, setEditorRef] = useState(null);
 
