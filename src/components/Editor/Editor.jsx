@@ -17,6 +17,18 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
     setEditorRef(editor);
   };
 
+  let timerId;
+
+  const handleChange = (editor, data, value) => {
+    // Clear the previous timer
+    clearTimeout(timerId);
+
+    // Set a new timer to update the code after a delay
+    timerId = setTimeout(() => {
+      setCode(value);
+    }, 500); // Adjust the delay time as needed (e.g., 500 milliseconds)
+  };
+
   useEffect(() => {
     if (EditorRef) {
       const ydoc = new Y.Doc();
@@ -123,10 +135,8 @@ const Editor = ({ roomId, user, runPython, code, setCode }) => {
         }}
       >
         <CodeMirrorEditor
-          value={code}
-          onChange={(editor, data, value) => {
-            setCode(value);
-          }}
+          // value={code}
+          onChange={handleChange}
           autoScroll
           options={{
             mode: "python", // Set the mode to "python"
